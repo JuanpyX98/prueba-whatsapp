@@ -18,12 +18,12 @@ app.get('/webhook', (req, res) => {
     let token = req.query["hub.verify_token"]
     res.send("Holaa")
     
-    if(mode === "subscribe" && token === mytoken){
+    if(mode === "subscribe" && token === "juanpy"){
         res
             .status(200)
             .send(challange);
     }else{
-        res.status(403);
+        res.status(404);
     }
 
     
