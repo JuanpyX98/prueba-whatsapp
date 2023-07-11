@@ -55,6 +55,7 @@ app.post('/webhook',(req, res) =>{
           "Content-Type": "application/json"
         }
       })
+      res.send("Finalizado");
       res.sendStatus(200);
     }else{
       res.sendStatus(404)
