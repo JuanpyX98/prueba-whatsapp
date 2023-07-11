@@ -7,7 +7,7 @@ const app = express();
 
 const puerto = process.env.PORT || 3000;
 
-const token = process.env.TOKEN
+const token = process.env.TOKEN;
 
 const mytoken = process.env.MYTOKEN;
 
@@ -31,6 +31,8 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook',(req, res) =>{
   const cuerpo = req.body;
 
+  
+
   console.log(JSON.stringify(cuerpo, null,2));
 
   if(cuerpo.object){
@@ -46,7 +48,7 @@ app.post('/webhook',(req, res) =>{
           messsaging_product: "whatsapp",
           to:from,
           text:{
-            body:"Hola"
+            body:"hello_world",
           }
         },
         headers:{
