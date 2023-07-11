@@ -54,7 +54,6 @@ app.post('/webhook',(req, res) =>{
         }
       })
       res.sendStatus(200);
-      console.log(cuerpo)
     }else{
       res.sendStatus(404)
     }
