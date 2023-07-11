@@ -12,7 +12,7 @@ const token = process.env.TOKEN;
 const mytoken = process.env.MYTOKEN;
 
 
-app.get('/webhook', (req, res) => {
+app.get('/', (req, res) => {
     let mode = req.query["hub.mode"];
     let challange = req.query["hub.challenge"]
     let token = req.query["hub.verify_token"]
@@ -28,7 +28,7 @@ app.get('/webhook', (req, res) => {
     
 })
 
-app.post('/webhook',(req, res) =>{
+app.post('/',(req, res) =>{
   const cuerpo = req.body;
 
   
