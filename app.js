@@ -31,6 +31,8 @@ app.get('/', (req, res) => {
 app.post('/',(req, res) =>{
   const cuerpo = req.body;
 
+  res.send(cuerpo);
+
   
 
   console.log(JSON.stringify(cuerpo, null,2));
