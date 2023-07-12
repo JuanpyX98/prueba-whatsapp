@@ -37,7 +37,7 @@ app.post('/',(req, res) =>{
 
   console.log(JSON.stringify(cuerpo, null,2));
 
-  if(cuerpo.object){
+  
     if(cuerpo.entry && cuerpo.entry[0].changes && cuerpo.entry[0].changes[0].value.message && cuerpo.entry[0].changes[0].value.message[0]){
       let phon_no_id = cuerpo.entry[0].changes[0].value.metadata.phone_number_id
       let from = cuerpo.entry[0].changes[0].value.messages[0].from;
@@ -62,7 +62,7 @@ app.post('/',(req, res) =>{
     }else{
       res.sendStatus(404)
     }
-  }
+  
 })
 
 
